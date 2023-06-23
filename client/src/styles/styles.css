@@ -1,0 +1,680 @@
+.nav-bar {
+    height: 70px;
+    background-color:rgb(217, 180, 201);
+    border: 1px solid rgb(215, 189, 227);
+    display:-webkit-flex;
+}
+
+.home {
+    position: relative;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap: 1rem;
+}
+.profileSide{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    overflow: auto;
+}
+.LogoSearch {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.Search {
+    display: flex;
+    background-color:ghostwhite;
+    border-radius: 10px;
+    padding: 5px;
+
+    
+    
+}
+
+
+.Search>input{
+    background-color:#f2ebee;
+    border-radius: 10px;
+    border-color:#957784;
+    
+}
+ .s-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(106.23deg,#f99827,#f95f35,100%);
+    border-radius:5px ;
+    padding:4px;
+    cursor: pointer;
+    
+ }
+
+ .profile-card{
+    border-radius: 1.5rem;
+    display:flex ;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    overflow-x:clip;
+    background: #facfe3;
+ }
+
+ .profile-Images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .profile-Images>img:nth-of-type(1){
+    width:100%;
+    margin-left: 12px;
+
+ }
+
+ .profile-Images>img:nth-of-type(2){
+    width: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -3rem;
+    box-shadow: 1px gray;
+
+ }
+
+ .profile-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 10px;
+
+
+ }
+ .profile-name>span:nth-of-type(1){
+    font-weight: bold;
+ }
+ .follow-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+ }
+
+ .follow-status>hr{
+    width: 85%;
+    border: 1px solid grey;
+
+ }
+ .follow-status>div {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .follow> span:nth-of-type(1){
+    font-weight: bold;
+ }
+
+ .follow >span:nth-of-type(2){
+    color: var(--gray);
+    font-size: 13px;
+
+ }
+
+ .vl {
+    height: 150%;
+    border-left: 2px solid grey;
+ }
+
+ .profile-card>span{
+    font-weight: bold;
+    color: #460321;
+    align-self: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+ }
+
+ .follower-card {
+    width: 100%;
+    border-radius: 0.7rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+ }
+
+ .follower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .follower>div {
+    display: flex;
+    gap: 10px;
+ }
+
+ .followerImg{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+ }
+ .name{
+   display: flex;
+   flex-direction:column ;
+   align-items: flex-start;
+   justify-content: center;
+ }
+
+ .name>span:nth-of-type(1){
+   font-weight: bold;
+ }
+
+ .follow-button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   border: none;
+   border-radius: 0.5rem;
+   background: rgb(225, 66, 225);
+   transition:all 100ms ease-out ;
+   height: 2rem;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+
+ .unfollow-button {
+  color: rgb(225, 66, 225);
+  border: 2px solid rgb(225, 66, 225);
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0.5rem;
+  height: 2rem;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+ }
+
+ .follow-button:hover{
+   cursor: pointer;
+   color: #dd99b8;
+   background: transparent;
+   border: 2px solid purple;
+ }
+
+ .postSide{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   height: 100vh;
+   overflow: auto;
+
+ }
+
+ .postShare{
+   display: flex;
+   gap: 1rem;
+   background-color: #fcfcf1;
+   padding: 1rem;
+   border-radius: 1rem;
+ }
+
+ .postShare>img{
+   border-radius: 50%;
+   width: 3rem;
+   height: 3rem;
+ }
+
+ .postShare>div{
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   gap: 1rem;
+ }
+
+ .postShare>div>input{
+   background-color:antiquewhite;
+   border-radius: 10px;
+   padding: 10px;
+   font-size: 17px;
+   border: none;
+   outline: none;
+ }
+
+ .post-options{
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .option{
+   padding: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+ }
+
+ .option:hover{
+   cursor: pointer;
+ }
+
+ .share-btn{
+   padding: 5px;
+   padding-left: 20px;
+   padding-right: 20px;
+   font-size: 12px;
+   border-radius: 0.5rem;
+   background: rgb(225, 66, 225);
+   color: white;
+
+ }
+
+ .share-btn:hover{
+   cursor: pointer;
+   color: #dd99b8;
+   background: transparent;
+   border: 2px solid purple;
+ }
+
+.share-btn:disabled{
+  background-color: silver;
+  pointer-events: none;
+ }
+
+ .previewImage{
+   position: relative;
+ }
+
+ .previewImage>svg{
+   position: absolute;
+   right: 1rem;
+   top:0.5rem;
+   cursor: pointer;
+ }
+
+ .previewImage>img{
+   width: 100%;
+   max-height: 20rem;
+   object-fit: cover;
+   border-radius:0.5rem ;
+ }
+ .posts {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ .Post{
+   display: flex;
+   flex-direction: column;
+   padding: 1rem;
+   background-color: #fcf9fb;
+   border-radius: 1rem;
+   gap: 1rem;
+ }
+
+ .Post>img{
+   width: 100%;
+   max-height: 40rem;
+   object-fit: cover;
+   border-radius: 0.5rem;
+
+ }
+
+ .post-react{
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+ }
+
+ .right-Side {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+
+
+ }
+
+ .nav-Icons {
+   margin-top: 1rem;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .nav-Icons>img{
+   width: 1.5rem;
+   height: 1.5rem;
+ }
+
+ .TrendCard{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   background-color: aliceblue;
+   padding: 1rem;
+   border-radius: 1rem;
+   padding-left: 2rem;
+ }
+
+ .trend{
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+ }
+
+ .trend>span:nth-of-type(1){
+   font-weight: bold;
+ }
+
+ .trend>span:nth-of-type(2){
+   font-size: 13px;
+ }
+
+
+ .btn {
+   height: 3rem;
+   width: 80%;
+   align-self: center;
+   background: rgb(225, 66, 225);
+   color: white;
+   font-size: 20px;
+ }
+
+ .btn:hover{
+   cursor: pointer;
+   color: #dd99b8;
+   background: transparent;
+   border: 2px solid;
+ }
+
+ .profile{
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap:1rem;
+ }
+.InfoCard{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #f4e2ea;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+}
+ .InfoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .InfoHead>div:hover{
+  cursor: pointer;
+ }
+
+ .logout-button{
+  width: 7rem;
+  height: 2rem;
+  margin-top: 6rem;
+  align-self: flex-end;
+ }
+
+ .profile-center{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ }
+
+ .Auth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+  position: relative;
+ }
+
+ .Auth>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .a-left{
+  gap: 2rem;
+
+ }
+
+ .a-left>img {
+  gap: 4rem;
+  height: 8rem;
+
+ }
+
+ .info-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+
+ }
+
+ .info-input{
+  border: none;
+  outline: none;
+  background-color: rgb(229, 169, 205);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+ }
+
+ .info-form>div{
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+ }
+
+ .info-button {
+  width: 6rem;
+  height: 2rem;
+  align-self: flex-end;
+ }
+
+ .authForm{
+  background-color: #f5eef1;
+  border-radius: 1rem;
+  padding: 1 rem;
+ }
+
+.authForm > div{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22% 60% auto;
+  gap: 1rem;
+}
+
+.left-side-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ecdce3;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: auto;
+  min-height: 80vh;
+  overflow: scroll;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.right-side-chat{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  
+}
+
+.conversation:hover{
+  background: #eeaec4;
+  cursor: pointer;
+}
+
+.conversation {
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.conversation > div {
+  position: relative;
+}
+
+.online-dot {
+  background-color: greenyellow;
+  border-radius: 50%;
+  position: absolute;
+  left: 2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+
+.chatbox-empty-message {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+ .chat {
+    grid-template-columns: 16% auto;
+  }
+   .follower.conversation>div>.name{
+    display: none;
+   }
+}
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  overflow: scroll;
+}
+
+.message {
+
+  background: pink;
+  color: purple;
+  padding: 0.7rem;
+  border-radius: 1rem 1rem 1rem 0 ;
+  max-width: 28rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  }
+
+ .chat-sender {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    align-self: end;
+}
+
+.message>span:nth-child(2){
+  font-size: 0.7rem;
+  color: var(--textColor);
+  align-self: end;
+}
+  
+.chat-sender>input{
+  height: 70%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  flex  :1 ;
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+}
+
+.ChatBox-container {
+  background: var(--cardColor);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 14vh 60vh 13vh;
+  position: fixed;
+  
+}
+
+.chat-sender>div:nth-of-type(1)
+{
+  background: rgb(233, 233, 233);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer
+}
+
+
+
+
+
+.own {
+align-self: flex-end;
+border-radius: 1rem 1rem 0 1rem;
+background: pink;
+
+
+}
+
+
+
