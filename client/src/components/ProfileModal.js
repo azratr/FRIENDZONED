@@ -13,6 +13,8 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
   const [coverImage, setCoverImage] = useState(null);
   const dispatch = useDispatch();
   const param = useParams();
+
+
   const { user } = useSelector((state) => state.AuthReducer.authData);
   const handleChange = (e) =>{
     setFormData({...formData, [e.target.name]:e.target.value})
@@ -71,7 +73,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
         opened={modalOpened}
         onClose={() => setModalOpened(false)}
       >
-        <form className="info-form">
+        <form className="info-form" onSubmit={handleSubmit}>
           <h3>Your Info</h3>
 
           <div>
@@ -137,7 +139,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
             <input type="file" name="coverImage" onChange= {onImageChange} />
           </div>
 
-          <button className="share-btn info-button" onClick={handleSubmit}>Update</button>
+          <button className="share-btn info-button">Update</button>
         </form>
       </Modal>
     </>

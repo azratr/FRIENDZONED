@@ -13,41 +13,17 @@ import ChatBox from "../components/ChatBox";
 import { io} from 'socket.io-client'
 
 const Chat = () => {
+
+  const socket = useRef() 
   const { user } = useSelector((state) => state.AuthReducer.authData);
-  console.log(user);
 
   const [chats, setChats] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
     const [currentChat, setCurrentChat] = useState(null);
     const [sendMessage, setSendMessage] = useState(null);
    const [receivedMessage, setReceivedMessage] = useState(null);
-   const socket = useRef() 
 
-   useEffect(()=>{
-      if(sendMessage !== null){
-        socket.current.emit('send-message',sendMessage)
-      }
-   },[sendMessage])
-
-   //receive message
-
-  
-
-  useEffect(()=>{
-     socket.current = io('http://localhost:8800');
-     socket.current.emit("new-user-add",user._id)
-     socket.current.on('get-users',(users)=>{
-      setOnlineUsers(users);
-     })
-   },[user])
-
-  useEffect(()=>{
-    socket.current.on("receive-message", (data)=>{
-     setReceivedMessage(data)
-    })
-},[])
-
-  useEffect(() => {
+   useEffect(() => {
     const getChats = async () => {
       try {
         const { data } = await userChats(user._id);
@@ -58,7 +34,33 @@ const Chat = () => {
       }
     };
     getChats();
-  }, [user]);
+  }, [user._id]);
+
+  useEffect(()=>{
+    socket.current = io('http://localhost:8800');
+    socket.current.emit("new-user-add",user._id)
+    socket.current.on('get-users',(users)=>{
+     setOnlineUsers(users);
+    })
+  },[user])
+
+   useEffect(()=>{
+      if(sendMessage !== null){
+        socket.current.emit('send-message',sendMessage)
+      }
+   },[sendMessage])
+
+   //receive message
+
+
+  useEffect(()=>{
+    socket.current.on("receive-message", (data)=>{
+      console.log(data)
+     setReceivedMessage(data)
+    })
+},[])
+
+  
 
   const checkOnlineStatus = (chat)=>{
     const chatMember = chat.members.find((member)=>member !==user._id)
