@@ -1,5 +1,5 @@
 const AuthReducer = (
-  state = { authData: null, loading: false, error: false },
+  state = { authData: null, loading: false, error: false, updateLoading: false },
   action
 ) => {
   switch (action.type) {
@@ -24,7 +24,7 @@ const AuthReducer = (
       };
 
     case "UPDATING_FAIL":
-      return { ...state, updateLoading: false, error: true };
+      return { ...state, updateLoading: true, error: true };
 
     case "FOLLOW_USER":
       return {

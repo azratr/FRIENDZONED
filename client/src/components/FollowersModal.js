@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, useMantineTheme } from "@mantine/core";
-import FollowersCard from "../FollowersCard/FollowersCard";
+import FollowersCard from "./followersCard";
 
 const FollowersModal = ({ modalOpened, setModalOpened }) => {
   const theme = useMantineTheme();

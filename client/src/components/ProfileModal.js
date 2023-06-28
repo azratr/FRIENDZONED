@@ -139,7 +139,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
             <input type="file" name="coverImage" onChange= {onImageChange} />
           </div>
 
-          <button className="share-btn info-button">Update</button>
+          <button className="share-btn info-button" type="submit">Update</button>
         </form>
       </Modal>
     </>

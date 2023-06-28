@@ -24,10 +24,8 @@ const PostShare = () => {
         setImage (img);
        }
     }
-     const reset = ()=>{
-        setImage(null);
-        desc.current.value =""
-     }
+
+    
     const handleSubmit = (e)=>{
         e.preventDefault();
 
@@ -51,10 +49,14 @@ const PostShare = () => {
         dispatch(uploadPost(newPost))
         reset()
     }
+    const reset = ()=>{
+        setImage(null);
+        desc.current.value =""
+     }
     return(
         <>
         <div className='postShare'>
-            <img src={user.coverPicture? serverPublic+ user.profilePicture : serverPublic +"defaultProfile.jpg"} alt='pic'/>
+            <img src={ user.profilePicture? serverPublic + user.profilePicture: serverPublic +"defaultProfile.jpg"} alt='pic'/>
             <div>
                 <input 
                 ref={desc}

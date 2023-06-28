@@ -3,10 +3,12 @@ import "../styles/styles.css";
 import img from "../images/pic.png";
 import { useDispatch } from "react-redux";
 import { logIn, signUp } from "../actions/AuthAction";
+import {useNavigate} from 'react-router-dom'
 
 const Auth = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [isSignUp, setIsSignUp] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   
   const [data, setData] = useState({
     firstname: "",
@@ -28,7 +30,7 @@ const Auth = () => {
         ? dispatch(signUp(data))
         : setComfirmPass(false);
     } else {
-      dispatch(logIn(data));
+      dispatch(logIn(data,navigate));
     }
   };
 

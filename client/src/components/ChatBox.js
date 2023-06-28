@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import '../styles/styles.css'
 import { getUser } from "../api/UserRequest";
 import { addMessage, getMessages } from "../api/MessageRequest";
 import { format } from "timeago.js";
@@ -100,7 +101,7 @@ useEffect(()=> {
                         ? process.env.REACT_APP_PUBLIC_FOLDER +
                           userData.profilePicture
                         : process.env.REACT_APP_PUBLIC_FOLDER +
-                          "defaultProfile.png"
+                          "defaultProfile.jpg"
                     }
                     alt="Profile"
                     className="followerImage"

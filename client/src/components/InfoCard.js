@@ -22,10 +22,11 @@ const InfoCard = () => {
       } else {
         const profileUser = await UserApi.getUser(profileUserId);
         setProfileUser(profileUser);
+        console.log(profileUser)
       }
     };
     fetchProfileUser();
-  }, [profileUserId, user]);
+  }, [user]);
 
   const handleLogOut = () => {
     dispatch(logOut());
@@ -62,7 +63,7 @@ const InfoCard = () => {
         <span>
           <b>Lives In </b>
         </span>
-        <span>{profileUser.livesin}</span>
+        <span>{profileUser.livesIn}</span>
       </div>
       <div className="info">
         <span>

@@ -53,7 +53,7 @@ const ProfileCard = ({ location }) => {
                   {posts.filter((post) => post.userId === user._id).length}
                 </span>
                 <span>Posts</span>
-              </div>
+              </div>{" "}
             </>
           )}
         </div>
