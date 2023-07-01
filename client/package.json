@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4002",
+  "proxy": "https://friendzoned-d1r1.onrender.com",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@iconscout/react-unicons": "^2.0.2",
@@ -55,4 +55,5 @@
       "last 1 safari version"
     ]
   }
+
 }
