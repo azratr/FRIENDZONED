@@ -17,7 +17,7 @@ const Conversation = ({ data, currentUserId, online }) => {
       }
     };
     getUserData();
-  }, []);
+  }, [currentUserId, data.members, dispatch]);
   return (
     <>
       <div className="follower conversation">
