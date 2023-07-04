@@ -26,7 +26,7 @@ const InfoCard = () => {
       }
     };
     fetchProfileUser();
-  }, [user]);
+  }, [profileUserId, user]);
 
   const handleLogOut = () => {
     dispatch(logOut());

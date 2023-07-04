@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { getUser } from "../api/UserRequest";
 import {useDispatch} from "react-redux"
@@ -17,7 +18,7 @@ const Conversation = ({ data, currentUserId, online }) => {
       }
     };
     getUserData();
-  }, [currentUserId, data.members, dispatch]);
+  }, []);
   return (
     <>
       <div className="follower conversation">
