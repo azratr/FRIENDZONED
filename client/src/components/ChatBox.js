@@ -80,7 +80,7 @@ useEffect(()=> {
     setMessages([...messages, receivedMessage]);
   }
 
-},[receivedMessage])
+},[chat._id, messages, receivedMessage])
 
 
 
