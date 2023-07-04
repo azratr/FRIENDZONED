@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://friendzoned-02bh.onrender.com" });
+const API = axios.create({ baseURL: "https://friendzoned-5xpg.onrender.com" });
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem('profile'))

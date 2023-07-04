@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://friendzoned-02bh.onrender.com" });
+const API = axios.create({ baseURL: "https://friendzoned-5xpg.onrender.com" });
 
 export const logIn = (formData) => API.post("/auth/login", formData);
 export const signUp = (formData) => API.post("/auth/register", formData);
